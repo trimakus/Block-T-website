@@ -1,0 +1,50 @@
+// components/HomePage/CtaSection/CtaSection.module.scss
+.cta {
+    background-image: url('/imgs/section-ready-to-transform.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    color: white;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    
+    .cta-card{
+      max-width: 50rem;
+      padding: 1.5rem;
+      background: linear-gradient(90deg,rgba(9, 63, 150, 0.7) 0%, rgba(84, 187, 239, 0.7) 50%);
+      text-align: center;
+      border-radius: 20px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+    .ctaButtons{
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  
+    @media (max-width: 768px) {
+      padding: 3rem 1rem;
+  
+      h2 {
+        font-size: 1.8rem;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+  
+    }
+  }

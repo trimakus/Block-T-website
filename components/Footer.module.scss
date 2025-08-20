@@ -1,0 +1,101 @@
+// components/HomePage/Footer/Footer.module.scss
+.footer {
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 40%, rgba(28, 136, 179, 0.21) 100%);
+  padding: 3rem 2rem 1rem;
+  
+    .footerContent {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #ED9D06;
+  
+      .footerBrand {
+  
+        p {
+          font-size: 0.9rem;
+          line-height: 1.6;
+        }
+      }
+  
+      .footerLinks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+  
+        .linkColumn {
+          h4 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: #ED9D06;
+          }
+  
+          ul {
+            list-style-type: none;
+            padding: 0;
+  
+            li {
+              margin-bottom: 0.8rem;
+              font-size:0.8rem;
+              a {
+                color: #000;
+                text-decoration: none;
+                transition: color 0.3s;
+  
+               
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .footerBottom {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 1rem auto 0;
+      padding-top: 1rem;
+      color: #bdc3c7;
+      font-size: 0.9rem;
+  
+      .footerLegal {
+        display: flex;
+        gap: 1.5rem;
+  
+        a {
+          color: #bdc3c7;
+          text-decoration: none;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #3498db;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+  
+      .footerContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+  
+        .footerLinks {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+  
+      .footerBottom {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }

@@ -1,0 +1,50 @@
+.why {
+    padding: 2rem 0;
+    background: linear-gradient(to bottom, #f9fcff, #ffffff);
+  
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+  
+      .highlight {
+        color: var(--color-primary);
+      }
+    }
+  
+    .subtitle {
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      color: #555;
+    }
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+  
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+  
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+  
+      &:hover {
+        transform: translateY(-5px);
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: #fff;
+        p {
+          color: #f0f0f0;
+        }
+      }
+    }
+  }
+  

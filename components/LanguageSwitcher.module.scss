@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+  }
+  
+  .trigger {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    outline: none !important;
+  }
+  
+  .menuItems {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+    z-index: 50;
+    min-width: 100px;
+    button {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        background-color: #fff;
+        border: 1px solid #fefefe;
+    }
+  }
+  

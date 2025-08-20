@@ -1,0 +1,34 @@
+.trusted {
+    background: linear-gradient(90deg, #ff7a00, #ffb347);
+    padding: 2rem 0;
+    color: #fff;
+  
+    h2 {
+      margin: 0.1rem 0;
+      font-size: 2rem;
+    }
+  
+    p {
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+  
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+  
+    .logoCard {
+      background: rgba(255, 255, 255, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // color: #333;
+      padding: 1rem;
+      border-radius: 20px 0 20px 0;
+      // font-weight: 600;
+      // text-align: center;
+    }
+  }
+  
