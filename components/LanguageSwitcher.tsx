@@ -5,7 +5,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import Image from "next/image";
 import { useState } from "react";
 import enFlag from "@/public/icons/flags/en.svg";
-import styles from './LanguageSwitcher.module.scss'
+import styles from '@/src/assets/styles/LanguageSwitcher.module.scss'
 import { switcherLanguagesInterface } from "@/types/types";
 
 const languages:[switcherLanguagesInterface] = [

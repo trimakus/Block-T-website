@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./OurSolutions.module.scss";
+import styles from "@/src/assets/styles/OurSolutions.module.scss";
 
 const solutions = [
   {

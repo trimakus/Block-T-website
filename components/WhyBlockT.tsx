@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import styles from "./WhyBlockT.module.scss";
+import styles from "@/src/assets/styles/WhyBlockT.module.scss";
 import { useState } from "react";
 
 const cards = [

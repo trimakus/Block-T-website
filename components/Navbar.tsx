@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./Navbar.module.scss";
+import styles from "@/src/assets/styles/Navbar.module.scss";
 import ArrowRightIcon from "@/public/icons/arrowRightIcon";
 import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";

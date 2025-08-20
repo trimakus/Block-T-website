@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Footer.module.scss';
+import styles from '@/src/assets/styles/Footer.module.scss';
 import Image from 'next/image';
 import LinkedinIcon from '@/public/icons/linkedinIcon';
 import TwitterIcon from '@/public/icons/twitterIcon';

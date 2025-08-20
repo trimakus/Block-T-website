@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import styles from './Services.module.scss';
+import styles from '@/src/assets/styles/Services.module.scss';
 import Image from 'next/image';
 const servicesPreClincal = [
   {

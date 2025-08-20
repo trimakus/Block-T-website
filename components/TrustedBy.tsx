@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./TrustedBy.module.scss";
+import styles from "@/src/assets/styles/TrustedBy.module.scss";
 
 const logos = [
   "/imgs/partner-bcrf.png",

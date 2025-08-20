@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CtaSection.module.scss';
+import styles from '@/src/assets/styles/CtaSection.module.scss';
 import ArrowRightIcon from '@/public/icons/arrowRightIcon';
 
 const CtaSection = () => {
