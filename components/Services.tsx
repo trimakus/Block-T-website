@@ -117,7 +117,7 @@ const Services = () => {
       <div className='container flex flex-col flex-align-center'>
       <h2> <span className='text-dark-blue-gradient'>Multiple Services for a Seamless</span> <br /> Research Experience</h2>
       <p>
-        Block-T's platforms are designed to simplify and strengthen your research process. Whether for preclinical or clinical studies, 
+        Block-T&apos;s platforms are designed to simplify and strengthen your research process. Whether for preclinical or clinical studies, 
         our technology adapts to meet your needs.
       </p>
       <div className={styles['service-container']}>

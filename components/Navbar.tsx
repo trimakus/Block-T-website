@@ -32,7 +32,7 @@ export default function Navbar() {
 
         {/* Desktop actions */}
         <div
-          className={`${styles["navbar-container-btn-switcher"]} ${styles.desktopOnly}`}
+          className={`${styles["navbar-container-btn-switcher"]} flex-align-center ${styles.desktopOnly}`}
         >
           <div className={styles.actions}>
             <button className="btn btn-orange-gradient">

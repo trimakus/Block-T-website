@@ -6,15 +6,15 @@ import Image from "next/image";
 import { useState } from "react";
 import enFlag from "@/public/icons/flags/en.svg";
 import styles from './LanguageSwitcher.module.scss'
+import { switcherLanguagesInterface } from "@/types/types";
 
-const languages = [
+const languages:[switcherLanguagesInterface] = [
   { code: "en", name: "English", flag: enFlag },
 //   { code: "fr", name: "Français", flag: frFlag },
 ];
-console.log(styles)
 
 export default function LanguageSwitcher() {
-  const [selected, setSelected] = useState<any>(languages[0]);
+  const [selected, setSelected] = useState<switcherLanguagesInterface>(languages[0]);
 
   return (
     <Menu as="div" className={styles.container}>
