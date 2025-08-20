@@ -36,7 +36,7 @@ export default function WhyBlockT() {
         <h2>
           Why Block-T?<br/>
           <span className={'text-dark-blue-gradient'}>
-            Rebuilding Trust
+            Rebuilding Trust{' '}
           </span>
           in Modern Research
         </h2>
