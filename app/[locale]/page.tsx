@@ -8,14 +8,12 @@ import WhyBlockT from "@/components/WhyBlockT";
 export default function HomePage() {
   return (
     <>
-      
       <Hero />
       <TrustedBy />
       <WhyBlockT />
       <OurSolutions />
       <Services />
       <CtaSection />
-      
     </>
   );
 }

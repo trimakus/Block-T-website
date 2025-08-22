@@ -1,65 +1,64 @@
-'use client'
+"use client";
 import Image from "next/image";
 import styles from "@/src/assets/styles/WhyBlockT.module.scss";
 import { useState } from "react";
-
-const cards = [
-  {
-    blackIcon: "/icons/svgs/dna-black.svg",
-    blancIcon: "/icons/svgs/dna-blanc.svg",
-    title: "Traceability Gaps",
-    desc: "Gain Full Visibility Into Your Research With Detailed, Step-By-Step Records That Ensure Accountability And Streamline Audits.",
-    color: "blue",
-  },
-  {
-    blackIcon: "/icons/svgs/shield-black.svg",
-    blancIcon: "/icons/svgs/shield-blanc.svg",
-    title: "Reliability",
-    desc: "Trust In Our Secure, Robust Platforms To Deliver Consistent, High-Quality Data For Every Stage Of Your Research.",
-    color: "white",
-  },
-  {
-    blackIcon: "/icons/svgs/collab-setting-black.svg",
-    blancIcon: "/icons/svgs/collab-setting-blanc.svg",
-    title: "Transparency Deficit",
-    desc: "Promote Trust And Collaboration With Systems Designed For Open, Tamper-Proof Data Sharing And Clear Workflows.",
-    color: "white",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function WhyBlockT() {
-  const [hoveredCard, setHoveredCard] = useState<number|null>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const t = useTranslations();
+  const cards = [
+    {
+      blackIcon: "/icons/svgs/dna-black.svg",
+      blancIcon: "/icons/svgs/dna-blanc.svg",
+      title: t("Traceability_Gaps"),
+      desc: t("Gain_Full_Visibility_Into"),
+      color: "blue",
+    },
+    {
+      blackIcon: "/icons/svgs/shield-black.svg",
+      blancIcon: "/icons/svgs/shield-blanc.svg",
+      title: t("Reliability"),
+      desc: t("Trust_In_Our_Secure"),
+      color: "white",
+    },
+    {
+      blackIcon: "/icons/svgs/collab-setting-black.svg",
+      blancIcon: "/icons/svgs/collab-setting-blanc.svg",
+      title: t("Transparency_Deficit"),
+      desc: t("Promote_Trust_And_Collaboration"),
+      color: "white",
+    },
+  ];
 
   return (
     <section className={styles.why}>
       <div className="container text-center">
         <h2>
-          Why Block-T?<br/>
-          <span className={'text-dark-blue-gradient'}>
-            Rebuilding Trust{' '}
+          {t("Why_Block_T")}
+          <br />
+          <span className={"text-dark-blue-gradient"}>
+            {t("Rebuilding_Trust")}{" "}
           </span>
-          in Modern Research
+          {t("in_Modern_Research")}
         </h2>
-        <p className={styles.subtitle}>
-          Modern scientific research is at a crossroads, grappling with foundational issues
-          that hinder progress and trust. Block-T addresses these challenges with innovative
-          solutions, ensuring data integrity, reproducibility, and scalability in every step
-          of your research journey.
-        </p>
+        <p className={styles.subtitle}>{t("Modern_scientific_research")}</p>
 
         <div className={styles.cards}>
           {cards.map((card, i) => (
             <div
               key={i}
-              className={`${styles.card} ${hoveredCard === i ? styles.hovered : ''}`}
+              className={`${styles.card} ${
+                hoveredCard === i ? styles.hovered : ""
+              }`}
               onMouseEnter={() => setHoveredCard(i)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className={styles.iconContainer}>
-                <Image 
-                  src={hoveredCard === i ? card.blancIcon : card.blackIcon} 
-                  alt={`icon-${i}`} 
-                  height={80} 
+                <Image
+                  src={hoveredCard === i ? card.blancIcon : card.blackIcon}
+                  alt={`icon-${i}`}
+                  height={80}
                   width={80}
                   className={styles.icon}
                 />

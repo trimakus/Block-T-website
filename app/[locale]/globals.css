@@ -126,3 +126,35 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.menuItems {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #E7EFFA;
+  border-radius: 4px;
+  margin-top: 4px;
+  z-index: 50;
+  min-width: 100px;
+  padding: 0.4rem;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0px 5px 10px 0px rgba(0, 48, 140, 0.25);
+  outline: none;
+  button {
+      padding: 0.3rem;
+      margin: 5px auto;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      background-color: #eaedf4;
+      box-shadow: 0px 5px 10px 0px rgba(0, 48, 140, 0.25);
+      border-radius: 10px 0px 10px 0;
+      border: none;
+      width: 100%;
+      &.active {
+        background: var(--orange-gradient) !important;
+        color: #fff !important;
+      }
+  }
+  
+}
