@@ -7,6 +7,7 @@ import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import ArrowDownIcon from "@/public/icons/arrowDownIcon";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,9 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <ul className={`${styles.menu} ${styles.desktopOnly}`}>
-          <Link href={"/"}>{t("Solutions")}</Link>
-          <Link href={"/"}>{t("Services")}</Link>
-          <Link href={"/"}>{t("About")}</Link>
+          <Link href={"/"}>{t("Solutions")} <ArrowDownIcon width={10} height={10} /> </Link>
+          <Link href={"/"}>{t("Services")} <ArrowDownIcon width={10} height={10} /> </Link>
+          <Link href={"/"}>{t("About")} <ArrowDownIcon width={10} height={10} /> </Link>
         </ul>
 
         {/* Desktop actions */}

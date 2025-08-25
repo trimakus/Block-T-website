@@ -3,8 +3,8 @@
 import ArrowDownIcon from "@/public/icons/arrowDownIcon";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import Image from "next/image";
-import { useState } from "react";
 import enFlag from "@/public/icons/flags/en.svg";
+import frFlag from "@/public/icons/flags/fr.svg";
 import styles from "@/src/assets/styles/LanguageSwitcher.module.scss";
 import { switcherLanguagesInterface } from "@/types/types";
 import { useLocale } from "next-intl";
@@ -12,7 +12,7 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 
 const languages: switcherLanguagesInterface[] = [
   { code: "en", name: "English", flag: enFlag },
-  { code: "fr", name: "Français", flag: enFlag },
+  { code: "fr", name: "Français", flag: frFlag },
 ];
 
 export default function LanguageSwitcher() {
