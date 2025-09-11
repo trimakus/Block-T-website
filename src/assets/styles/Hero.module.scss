@@ -1,19 +1,35 @@
+.backgroundImg{
+  background-image: url('/imgs/banner.png');
+  background-repeat: no-repeat;       
+background-size: cover;         
+background-position: center;
+// height: 100%;
+// background-attachment: fixed; 
+}
+
+.card{
+  background: #4343434D 0.5;
+  border-radius: 20px;
+  max-width: 40rem;
+  padding: 1.5rem 2.5rem;
+}
+
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    // padding: 4rem 0;
-    gap: 2rem;
+    display: flex;
+    // grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding: 9rem 0;
+    // gap: 2rem;
+
   
     h1 {
       font-size: 2.5rem;
       font-weight: 700;
-  
     }
   
     p {
       margin: 1.5rem 0;
-      color: #444;
+      color: #fff;
     }
   
     .buttons {
@@ -22,27 +38,14 @@
     }
   }
   
-  .illustration {
-    display: flex;
-    justify-content: center;
-  
-    .shape {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #00c6ff, #0072ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      color: white;
-    }
-  }
-
   @media screen and (max-width: 1000px) {
-    .content{
-      padding: 2rem 0 !important;
+    .hero {
+      padding: 5rem 0;
+      justify-content: center;
     }
+    // .content{
+    //   padding: 2rem 0 !important;
+    // }
     .illustration img {
       width: 100%;
       height: 100%;
@@ -53,15 +56,17 @@
   @media (max-width: 768px) {
     .hero {
       grid-template-columns: 1fr;
+      padding: 3rem 2rem;
       text-align: center;
       .content{
-        padding: 2rem 0 !important;
+        padding: 2rem !important;
       }
       .illustration{
         display: none;
       }
       .buttons {
         justify-content: center;
+        flex-wrap: wrap;
       }
     }
   }

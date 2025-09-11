@@ -120,34 +120,32 @@ const Services = () => {
       : servicesClincal;
 
   return (
-    <section className={styles.services} id="services">
+    <section className={`${styles.services} blue-white-blue-gradient`} id="services">
       <div className="container flex flex-col flex-align-center">
-        <h2>
-          <span className="text-dark-blue-gradient">
-            {t("Multiple_Services_for_a_Seamless")}
-          </span>
+        <h1 className="text-dark-blue-gradient text-center">
+        Multiple Services for a Seamless 
           <br />
-          {t("Research_Experience")}
-        </h2>
+          Research Experience
+        </h1>
         <p>{t("Platforms_Description")}</p>
         <div className={styles["service-container"]}>
           <div className={styles["toggle-services"]}>
             <button
-              onClick={() => handleClickServiceType(t("Pre_Clinical_Trial"))}
+              onClick={() => handleClickServiceType('Pre-Clinical Trial')}
               className={
-                selectedServiceType === t("Pre_Clinical_Trial")
-                  ? "btn-dark-blue-gradient"
-                  : ""
+                selectedServiceType === 'Pre-Clinical Trial'
+                  ? "btn-orange-gradient"
+                  : "btn-grey-gradient "
               }
             >
               {t("Pre_Clinical_Trial")}
             </button>
             <button
-              onClick={() => handleClickServiceType(t("Clinical_Trial"))}
+              onClick={() => handleClickServiceType('Clinical Trials')}
               className={
-                selectedServiceType === t("Clinical_Trial")
-                  ? "btn-dark-blue-gradient"
-                  : ""
+                selectedServiceType === 'Clinical Trials'
+                  ? "btn-orange-gradient"
+                  : "btn-grey-gradient "
               }
             >
               {t("Clinical_Trial")}

@@ -1,7 +1,6 @@
 .services {
   padding: 2rem 2rem;
   margin: 0 auto;
-  background: linear-gradient(90deg, #ff7a00, #ffb347);
   h2 {
     text-align: center;
     font-size: 2rem;
@@ -30,9 +29,11 @@
       }
       button:first-of-type {
         border-radius: 8px 0 0 8px;
+        font-size: 1.5rem;
       }
   
       button:nth-of-type(2) {
+        font-size: 1.5rem;
         border-radius: 0 8px 8px 0;
             }
       
@@ -44,12 +45,6 @@
     // padding: 2rem;
     // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    h3 {
-      color: #3498db;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      text-align: center;
-    }
 
     ul {
       display: grid;
@@ -70,7 +65,7 @@
         cursor: pointer;
         &:hover {
           transform: translateY(-5px);
-          background: linear-gradient(135deg, #00c6ff, #0072ff);
+          background: var(--orange-gradient);
           color: #fff;
         }
         h4{

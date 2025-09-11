@@ -32,7 +32,7 @@ export default function WhyBlockT() {
   ];
 
   return (
-    <section className={styles.why}>
+    <section className={`${styles.why} blue-white-blue-gradient`}>
       <div className="container text-center">
         <h2>
           {t("Why_Block_T")}

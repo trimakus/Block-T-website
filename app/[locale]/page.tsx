@@ -1,4 +1,6 @@
+import ChooseOurSolutions from "@/components/ChooseOurSolutions";
 import CtaSection from "@/components/CtaSection";
+import EmpoweringResearch from "@/components/EmpoweringResearch";
 import Hero from "@/components/Hero";
 import OurSolutions from "@/components/OurSolutions";
 import Services from "@/components/Services";
@@ -11,6 +13,8 @@ export default function HomePage() {
       <Hero />
       <TrustedBy />
       <WhyBlockT />
+      <EmpoweringResearch/>
+      <ChooseOurSolutions/>
       <OurSolutions />
       <Services />
       <CtaSection />

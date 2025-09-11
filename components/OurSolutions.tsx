@@ -6,25 +6,21 @@ export default function OurSolutions() {
   const t = useTranslations();
   const solutions = [
     {
-      icon: "/icons/svgs/microscope-blanc.svg",
-      title: t("DEEP_T"),
-      desc: t("Comprehensive_platform_for_preclinical"),
-      color: "blue",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+      img: "/imgs/preclinical.png",
+      title: "Preclinical",
+      desc: "Empowering preclinical research with secure data workflows and AI-driven insights.",
+
     },
     {
-      icon: "/icons/svgs/patient-black.svg",
-      title: t("CLIN_T"),
-      desc: t("End_to_end_platform"),
-      color: "white",
-      features: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
+      img: "/imgs/clinical.png",
+      title: "clinical",
+      desc: "Revolutionizing clinical trials through transparency, accountability, and reproducible processes.",
+
     },
   ];
 
   return (
     <section className={styles.solutions}>
-      <div />
-
       <div
         className="container text-center"
         style={{ position: "relative", zIndex: "2" }}
@@ -36,26 +32,16 @@ export default function OurSolutions() {
           {solutions.map((sol, i) => (
             <div
               key={i}
-              className={`${styles.card} ${
-                sol.color === "blue" ? styles.blue : ""
-              }`}
+              style={{
+                backgroundImage: `url(${sol.img})`,
+              }}
+              className={styles.cardWarpper}
             >
-              <div>
-                <Image
-                  src={sol.icon}
-                  alt={`icon-${i}`}
-                  width={80}
-                  height={80}
-                />
+              <div className={`${styles.card}`}>
+               
+                <h3>{sol.title}</h3>
+                <p>{sol.desc}</p>
               </div>
-              <h3>{sol.title}</h3>
-              <p>{sol.desc}</p>
-              <ul>
-                {sol.features.map((f, j) => (
-                  <li key={j}>✔ {f}</li>
-                ))}
-              </ul>
-              <button className="btn btn-secondary">{t("Learn_More")}</button>
             </div>
           ))}
         </div>

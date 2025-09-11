@@ -1,5 +1,5 @@
 .trusted {
-    background: linear-gradient(90deg, #ff7a00, #ffb347);
+    // background: linear-gradient(90deg, #ff7a00, #ffb347);
     padding: 2rem 0;
     color: #fff;
   
@@ -17,10 +17,11 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1.5rem;
+
     }
   
     .logoCard {
-      background: rgba(255, 255, 255, 0.3);
+      background: linear-gradient(360deg, #ff7a00, #ffb347);
       display: flex;
       justify-content: center;
       align-items: center;
