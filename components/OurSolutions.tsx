@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "@/src/assets/styles/OurSolutions.module.scss";
 import { useTranslations } from "next-intl";
 

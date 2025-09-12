@@ -44,68 +44,80 @@
   gap: 1rem;
 }
 
-.serviceDetailsContainer {
+.deepTPreclinicalServices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.benefitCard {
+  background: #fff;
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-.serviceDetailsImg {
-  background-image: url("/imgs/background-form.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 30px;
-}
 
+  max-width: 450px;
+  // padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
 
-
-
-.deepTPreclinicalServices {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
+
   
-  .benefitCard {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    background: #fff;
-    transition: all 0.3s;
-    &:hover {
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-5px);
+    background: var(--orange-gradient);
+    color: #fff;
+    p {
+      color: #f0f0f0;
     }
   }
-  
-  /* Main Service Section */
-  .serviceDetailsSection {
+}
+.serviceDetailsSection {
     position: relative;
-    flex: 1;
+    // flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px;
+    // min-height: 350px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   }
-  
-  /* Background Image */
-  .serviceBackground {
+
+// .serviceDetailsContainer {
+//   border-radius: 30px;
+//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+// }
+.serviceDetailsImg {
     position: absolute;
     inset: 0;
     border-radius: 16px;
-    background: url("/imgs/bg-pattern.png") no-repeat center/cover;
+    background-image: url("/imgs/background-form.png");
     z-index: 0;
-  }
-  
-  /* White Card */
-  .serviceDetailCard {
+}
+
+.serviceDetailCard {
     position: relative;
     z-index: 1;
     background: #fff;
     border-radius: 16px;
-    padding: 2rem;
+    margin-top: 17%;
+    padding: 1.5rem;
     max-width: 900px;
     width: 100%;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  .serviceDetailsTitle{
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
   }
   
   .serviceDetailCardContent {
@@ -118,10 +130,52 @@
       grid-template-columns: 1fr;
     }
   }
+
+.gold-line {
+  border: none;
+  border-top: 1px solid var(--gold);
+  margin: 10px auto;
+}
+
+.teamMemberCard {
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    max-width: 450px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    img{
+        border-radius: 50%;
+    }
+    span{
+        font-size: 0.8rem;
+        color: var(--gold);
+    }
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+    p{
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
   
-  .gold-line {
-    border: none;
-    border-top: 1px solid var(--gold);
-    width: 50%;
-    margin: 10px auto;
+    .iconBottomRight{
+        position: absolute;
+        bottom: 0px;
+        right: 8px;
+    }
+  
+    &:hover {
+      transform: translateY(-5px);
+      background: var(--orange-gradient);
+      color: #fff;
+      span{
+
+        color: #fff;
+    }
+    }
   }

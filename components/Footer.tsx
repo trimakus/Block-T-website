@@ -3,6 +3,7 @@ import TwitterIcon from "@/public/icons/twitterIcon";
 import styles from "@/src/assets/styles/Footer.module.scss";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const t = useTranslations();
@@ -28,10 +29,10 @@ const Footer = () => {
             <h4>{t("Solutions")}</h4>
             <ul>
               <li>
-                <a href="#deep-t">{t("DEEP_T")}</a>
+                <Link href="/deep-t">{t("DEEP_T")}</Link>
               </li>
               <li>
-                <a href="#clin-t">{t("CLIN_T")}</a>
+                <Link href="/">{t("CLIN_T")}</Link>
               </li>
             </ul>
           </div>
@@ -52,7 +53,7 @@ const Footer = () => {
             <h4>{t("About")}</h4>
             <ul>
               <li>
-                <a href="#contact">{t("Contact_Us")}</a>
+                <Link href="/contact-us">{t("Contact_Us")}</Link>
               </li>
               <li>
                 <a href="#privacy">{t("Privacy_Leadership")}</a>

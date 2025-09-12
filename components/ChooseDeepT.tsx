@@ -30,7 +30,9 @@ function ChooseDeepT() {
       className={`${styles.chooseOurSolutions} blue-white-blue-gradient`}
     >
       <div className="container text-center">
-        <h1 className="text-dark-blue-gradient">Why CHOOSE DEEP-T?</h1>
+        <div className="flex flex-justify-center">
+        <h1 className="text-light-blue-gradient w-fc">Why CHOOSE DEEP-T?</h1>
+        </div>
         <p className={styles.subtitle}>
           Deep-T ensures reliable, reproducible, and secure preclinical research
           with advanced AI and blockchain technology, streamlining every step of
@@ -57,7 +59,7 @@ function ChooseDeepT() {
                     className={styles.icon}
                   />
                 </div>
-                <hr />
+                <hr className='horizontal-orange-line'/>
                 <h3>{card.title}</h3>
                 <p>{card.desc}</p>
               </div>

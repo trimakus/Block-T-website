@@ -8,30 +8,30 @@ import Image from "next/image";
 
 const pages = [
   {
-    name: "CLINT-T",
-    path: "/",
-    blackIcon: "/icons/svgs/microscope-black.svg",
-    whiteIcon: "/icons/svgs/microscope-blanc.svg",
+    name: "Contact Us",
+    path: "/contact-us",
+    blackIcon: "/icons/svgs/contact-us-black.svg",
+    whiteIcon: "/icons/svgs/contact-us-blanc.svg",
   },
   {
-    name: "DEEP-T",
-    path: "/deep-t",
-    blackIcon: "/icons/svgs/patient-black.svg",
-    whiteIcon: "/icons/svgs/patient-blanc.svg",
+    name: "Leadership Team",
+    path: "/leadership",
+    blackIcon: "/icons/svgs/leadership-black.svg",
+    whiteIcon: "/icons/svgs/leadership-blanc.svg",
   },
 ];
 
-export default function SolutionMenu() {
+export default function AboutMenu() {
   const pathname = usePathname();
   const router = useRouter();
 
   const selected = pages.find((page) => page.path === pathname);
-
+    console.log('first',selected,pathname)
   return (
     <Menu as="div" className={styles.container}>
       {/* Trigger */}
       <MenuButton className={styles.trigger} style={{ fontSize: "large" }}>
-        Solutions <ArrowDownIcon width={10} height={10} />
+        About <ArrowDownIcon width={10} height={10} />
       </MenuButton>
 
       {/* Dropdown */}
@@ -44,7 +44,7 @@ export default function SolutionMenu() {
             >
               <Image
                 src={`${selected?.path === page.path ? page.whiteIcon :page.blackIcon }`}
-                alt={selected?.name ??'icon'}
+                alt={selected?.name??'icon'}
                 width={30}
                 height={30}
               />

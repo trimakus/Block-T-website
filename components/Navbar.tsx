@@ -6,9 +6,10 @@ import ArrowRightIcon from "@/public/icons/arrowRightIcon";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import ArrowDownIcon from "@/public/icons/arrowDownIcon";
 import SolutionMenu from "./SolutionMenu";
 import ServicesMenu from "./ServicesMenu";
+import AboutMenu from "./AboutMenu";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Navbar() {
         <ul className={`${styles.menu} ${styles.desktopOnly}`}>
           <li><SolutionMenu/></li>
           <li><ServicesMenu/></li>
-          <li>{t("About")} <ArrowDownIcon width={10} height={10} /> </li>
+          <li><AboutMenu/> </li>
         </ul>
 
         {/* Desktop actions */}
@@ -38,9 +39,10 @@ export default function Navbar() {
           className={`${styles["navbar-container-btn-switcher"]} flex-align-center ${styles.desktopOnly}`}
         >
           <div className={styles.actions}>
-            <button className="btn btn-orange-gradient">
-              {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
-            </button>
+            
+            <Link href={'/request-demo'} className={"btn btn-orange-gradient text-decoration-none"}>
+          {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
+          </Link>
           </div>
           <LanguageSwitcher />
         </div>
@@ -60,13 +62,13 @@ export default function Navbar() {
           <ul>
             <li ><SolutionMenu/></li>
             <li ><ServicesMenu/></li>
-            <li >{t("About")}</li>
+            <li ><AboutMenu/></li>
           </ul>
 
           <div className="flex flex-justify-end gap-3">
-            <button className="btn btn-orange-gradient">
-              {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
-            </button>
+          <Link href={'/request-demo'} className={"btn btn-orange-gradient text-decoration-none"}>
+          {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
+          </Link>
 
             <LanguageSwitcher />
           </div>

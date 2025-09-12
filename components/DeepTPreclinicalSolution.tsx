@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import styles from "@/src/assets/styles/DeepT.module.scss";
 
@@ -49,7 +48,7 @@ function DeepTPreclinicalSolution() {
           <div className={styles.benefitCard} key={index}>
            
             <h3>{item.title}</h3>
-            <hr />
+            <hr className='horizontal-orange-line'/>
             <div className="p-1">
 
         

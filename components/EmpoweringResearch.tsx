@@ -4,15 +4,13 @@ import Image from "next/image";
 
 function EmpoweringResearch() {
   return (
-    <section className={`blue-white-gradient `}>
+    <section className={`blue-white-gradient`}>
         <div className={`text-img-display container`}>
-
-     
       <Image
         src="/imgs/vaccin.png"
         alt="empowering-research"
-        width={500}
-        height={300}
+        width={600}
+        height={450}
       />
       <div>
         <h3>Transforming Research with Innovative Solutions</h3>
@@ -27,7 +25,7 @@ function EmpoweringResearch() {
           promote reproducibility.
         </p>
         <p>
-          Whether you're in preclinical or clinical research, our solutions are
+          Whether you&apos;re in preclinical or clinical research, our solutions are
           tailored to meet your specific needs and ensure trustworthy, impactful
           results.
         </p>

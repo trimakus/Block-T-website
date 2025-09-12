@@ -29,7 +29,7 @@ function ChooseOurSolutions() {
     <section className={`${styles.chooseOurSolutions} blue-white-blue-gradient`}>
         <div className='container text-center'>
         <h2>The trusted partner transforming biomedical research.</h2>
-        <h1 className="text-dark-blue-gradient">Why CHOOSE OUR SOLUTIONS?</h1>
+        <h1 className="text-light-blue-gradient">Why CHOOSE OUR SOLUTIONS?</h1>
         <p className={styles.subtitle}>Modern scientific research is at a crossroads, grappling with foundational issues that hinder progress and trust. Block-T addresses these challenges with innovative solutions, ensuring data integrity, reproducibility, and scalability in every step of your research journey.        </p>
        
 
@@ -53,7 +53,7 @@ function ChooseOurSolutions() {
                   className={styles.icon}
                 />
               </div>
-              <hr />
+              <hr className='horizontal-orange-line'/>
               <h3>{card.title}</h3>
               <p>{card.desc}</p>
             </div>

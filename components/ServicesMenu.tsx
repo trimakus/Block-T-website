@@ -159,8 +159,8 @@ export default function ServicesMenu() {
                     <Image
                       src={pathname === '' ? item.whiteIcon : item.blackIcon}
                       alt={item.title}
-                      width={25}
-                      height={25}
+                      width={30}
+                      height={30}
                     />
                     {item.title}
                   </button>

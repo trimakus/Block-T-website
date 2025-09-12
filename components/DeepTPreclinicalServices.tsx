@@ -29,8 +29,8 @@ function DeepTPreclinicalServices() {
 
   return (
     <div className="container text-center">
-      <h1>Preclinical Services (DEEP-T)</h1>
-      <h1 className="text-dark-blue-gradiant">
+      <h1 className="text-gold-dark-gradient">Preclinical Services (DEEP-T)</h1>
+      <h1 className="text-dark-blue-gradient">
         Laying the Foundation for Preclinical Success
       </h1>
       <p>
@@ -54,23 +54,25 @@ function DeepTPreclinicalServices() {
       </div>
 
       {/* Service Card with Background */}
-      <div className="flex gap-1 p-2">
+      <div className="flex-between gap-1 p-2 ">
         <div className="flex flex-align-center">
           <LeftYellowArrow />
         </div>
 
         <div className={styles.serviceDetailsSection}>
           {/* Background */}
-          <div className={styles.serviceBackground}></div>
-
-          {/* White Card */}
-          <div className={styles.serviceDetailCard}>
+          <div className={styles.serviceDetailsImg}></div>
+            <div className={styles.serviceDetailsTitle}>
             <h2 className="fw-400"> Security & Compliance</h2>
             <hr className={styles["gold-line"]} />
             <h2 className=" fw-400 text-gold">
               Blockchain-Backed Audit Trail
             </h2>
 
+            </div>
+          {/* White Card */}
+          <div className={styles.serviceDetailCard}>
+          
             <div
               className={styles.serviceDetailCardContent + " text-start"}
             >
