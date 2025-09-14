@@ -52,3 +52,14 @@
   text-align: center;
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gridList {
+    grid-template-columns: 1fr;
+  }
+  
+}

@@ -18,14 +18,14 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className="container flex-between">
         {/* Logo */}
-        <div className={styles.logo}>
+        <Link href='/' className={styles.logo}>
           <Image
             src={"/icons/svgs/block-t-logo.svg"}
             alt="logo-block-t"
             width={160}
             height={55}
           />
-        </div>
+        </Link>
 
         {/* Desktop menu */}
         <ul className={`${styles.menu} ${styles.desktopOnly}`}>
@@ -41,7 +41,7 @@ export default function Navbar() {
           <div className={styles.actions}>
             
             <Link href={'/request-demo'} className={"btn btn-orange-gradient text-decoration-none"}>
-          {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
+          {t("Request_A_Demo")} <ArrowRightIcon width={10} height={11} />
           </Link>
           </div>
           <LanguageSwitcher />
@@ -67,7 +67,7 @@ export default function Navbar() {
 
           <div className="flex flex-justify-end gap-3">
           <Link href={'/request-demo'} className={"btn btn-orange-gradient text-decoration-none"}>
-          {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
+          {t("Request_A_Demo")} <ArrowRightIcon width={10} height={11} />
           </Link>
 
             <LanguageSwitcher />

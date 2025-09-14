@@ -2,35 +2,36 @@
 import React, { useState } from 'react'
 import styles from '@/src/assets/styles/ChooseOurSolutions.module.scss'
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 function ChooseOurSolutions() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
+  const t = useTranslations()
     const cards = [
         {
           blackIcon: "/icons/svgs/data-integrity-black.svg",
           blancIcon: "/icons/svgs/data-integrity-black.svg",
-          title: "Data Integrity",
-          desc: "Secure, tamper-proof systems for uncompromised data.",
+          title: t("Data_Integrity"),
+          desc: t('Secure_tamper_proof_systems_for_uncompromised_data'),
         },
         {
           blackIcon: "/icons/svgs/reproducibility-black.svg",
           blancIcon: "/icons/svgs/reproducibility-black.svg",
-          title: "Reproducibility",
-          desc: "Transparent, step-by-step workflows for trustworthy results.",
+          title: t("Reproducibility"),
+          desc: t('Transparent_step_by_step_workflows_for_trustworthy_results'),
         },
         {
           blackIcon: "/icons/svgs/scalability-black.svg",
           blancIcon: "/icons/svgs/scalability-black.svg",
-          title: "Scalability",
-          desc: "Our flexible, future-ready solutions grow with your research, adapting to your evolving needs.",
+          title: t("Scalability"),
+          desc: t("Our_flexible_future-ready"),
         },
       ];
   return (
     <section className={`${styles.chooseOurSolutions} blue-white-blue-gradient`}>
         <div className='container text-center'>
-        <h2>The trusted partner transforming biomedical research.</h2>
-        <h1 className="text-light-blue-gradient">Why CHOOSE OUR SOLUTIONS?</h1>
-        <p className={styles.subtitle}>Modern scientific research is at a crossroads, grappling with foundational issues that hinder progress and trust. Block-T addresses these challenges with innovative solutions, ensuring data integrity, reproducibility, and scalability in every step of your research journey.        </p>
+        <h2>{t('The_trusted_partner_transforming_biomedical_research')}</h2>
+        <h1 className="text-light-blue-gradient">{t('Why_CHOOSE_OUR_SOLUTIONS')}</h1>
+        <p className={styles.subtitle}>{t('Modern_scientific_research')}</p>
        
 
         <div>

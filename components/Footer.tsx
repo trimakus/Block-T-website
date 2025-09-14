@@ -1,3 +1,4 @@
+"use client";
 import LinkedinIcon from "@/public/icons/linkedinIcon";
 import TwitterIcon from "@/public/icons/twitterIcon";
 import styles from "@/src/assets/styles/Footer.module.scss";
@@ -11,12 +12,13 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerBrand}>
+          <Link href={'/'}>
           <Image
             src={"/icons/svgs/block-t-logo.svg"}
             alt="logo-block-t"
             width={160}
             height={55}
-          />
+          /></Link>
           <p>{t("Accelerating_scientific_discoveries")}</p>
           <div className="flex flex-justify-center gap-3">
             <LinkedinIcon />

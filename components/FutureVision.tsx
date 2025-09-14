@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function FutureVision() {
+  const t = useTranslations()
   return (
     <section className={"blue-white-gradient"}>
       <div className={`text-img-display container`}>
@@ -13,26 +15,18 @@ function FutureVision() {
           height={500}
         />
         <div>
-          <h2>Shaping the Future of Biomedical Research</h2>
+          <h2>{t('Shaping_the_Future_of_Biomedical_Research')}</h2>
           <h1 className="text-dark-blue-gradient big-title">
-            Our Vision for the Future
+            {t('Our_Vision_for_the_Future')}
           </h1>
           <p>
-            At Block-T, our vision extends beyond just solving today&apos;s
-            challenges. We aim to create a future where biomedical research is
-            faster, more reliable, and fully traceable. By advancing the use of
-            AI and blockchain, we strive to set new standards in data security,
-            protocol reproducibility, and research transparency.
+           {t('At_Block_T_our_vision_extends_beyond')}
           </p>
           <p>
-            We envision a world where every step of the research process, from
-            study design to final results, is fully auditable and reproducible,
-            ensuring the integrity of data that shapes scientific progress. 
+            {t('We_envision_a_world_where_every_step')}
           </p>
           <p>
-            Our solutions will empower researchers worldwide to work more
-            efficiently, reduce resource waste, and accelerate breakthroughs for
-            the betterment of global health.
+            {t('Our_solutions_will_empower_researchers')}
           </p>
         </div>
       </div>

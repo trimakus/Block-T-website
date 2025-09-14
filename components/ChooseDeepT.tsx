@@ -2,27 +2,28 @@
 import React, { useState } from "react";
 import styles from "@/src/assets/styles/ChooseOurSolutions.module.scss";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 function ChooseDeepT() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
+  const t = useTranslations()
   const cards = [
     {
       blackIcon: "/icons/svgs/puzzle.svg",
       blancIcon: "/icons/svgs/puzzle.svg",
-      title: "Protocol Reproducibility Gaps",
-      desc: "Deep-T ensures consistent execution, reducing variability and improving study replication for reliable results.",
+      title: t('Protocol_Reproducibility_Gaps'),
+      desc: t("Deep-T_ensures_consistent_execution"),
     },
     {
       blackIcon: "/icons/svgs/setting.svg",
       blancIcon: "/icons/svgs/setting.svg",
-      title: "Data Reliability",
-      desc: "With AI and blockchain, Deep-T guarantees accurate, transparent, and verifiable data throughout the research process.",
+      title: t("Data_Reliability"),
+      desc: t("With_AI_and_blockchain"),
     },
     {
       blackIcon: "/icons/svgs/security.svg",
       blancIcon: "/icons/svgs/security.svg",
-      title: "Security",
-      desc: "Deep-T uses blockchain to protect data from tampering, ensuring confidentiality and compliance throughout your research.",
+      title: t("Security"),
+      desc: t("Deep_T_uses_blockchain_to_protect_data_from_tampering"),
     },
   ];
   return (
@@ -31,12 +32,10 @@ function ChooseDeepT() {
     >
       <div className="container text-center">
         <div className="flex flex-justify-center">
-        <h1 className="text-light-blue-gradient w-fc">Why CHOOSE DEEP-T?</h1>
+        <h1 className="text-light-blue-gradient w-fc">{t('Why_CHOOSE_DEEP_T')}</h1>
         </div>
         <p className={styles.subtitle}>
-          Deep-T ensures reliable, reproducible, and secure preclinical research
-          with advanced AI and blockchain technology, streamlining every step of
-          your study for optimal results.
+          {t('Deep_T_ensures_reliable')}
         </p>
 
         <div>

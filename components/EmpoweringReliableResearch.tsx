@@ -1,19 +1,21 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function EmpoweringReliableResearch() {
+  const t = useTranslations()
   return (
     <section className={'white-blue-gradient'}>
         <div className={`text-img-display container`}>
       <div>
-        <h1 className="text-dark-blue-gradient big-title">Empowering Reliable Research</h1>
+        <h1 className="text-dark-blue-gradient big-title">{t('Empowering_Reliable_Research')}</h1>
         <p>
-        At Block-T, we are at the forefront of revolutionizing biomedical research by integrating cutting-edge blockchain and AI technologies.
+        {t('At_Block-T_we_are_at_the_forefront')}
         </p>
         <p>
-        Our mission is to drive trust, transparency, and efficiency across the research lifecycle, helping to solve the critical challenges faced by scientists, researchers, and institutions globally.        </p>
-       <p>We are passionate about improving data integrity, ensuring reproducibility, and enhancing the scalability of research. Block-T is committed to empowering the next generation of scientific discoveries with secure, innovative solutions that address the unique needs of preclinical and clinical trials.</p>
+        {t('Our_mission_is_to_drive_trust')}</p>
+       <p>{t('We_are_passionate_about_improving')}</p>
       </div>
 
       <Image

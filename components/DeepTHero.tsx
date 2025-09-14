@@ -1,19 +1,20 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function DeepTHero() {
+  const t = useTranslations()
   return (
     <section className={'white-blue-gradient'}>
         <div className={`text-img-display container`}>
       <div>
-        <h1 className="text-dark-blue-gradient big-title w-fc">DEEP-T</h1>
+        <h1 className="text-dark-blue-gradient big-title w-fc">{t('DEEP_T')}</h1>
         <p>
-        <strong>Deep-T </strong>is designed to provide researchers with a reliable, secure, and scalable platform for preclinical studies.
-        Leveraging the power of blockchain and AI, Deep-T ensures that every step of your research is traceable, reproducible, and aligned with the highest standards of scientific integrity.
+        <strong>{t('Deep-T')}</strong>{t('is_designed_to_provide_researchers')}
         </p>
         <p>
-        From study design to data validation, Deep-T streamlines your preclinical process, empowering you to make data-driven decisions with confidence.
+        {t('From_study_design_to_data_validation')}
         </p>
        
       </div>

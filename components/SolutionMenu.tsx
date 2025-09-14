@@ -5,25 +5,29 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "@/src/assets/styles/LanguageSwitcher.module.scss";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-const pages = [
-  {
-    name: "CLINT-T",
-    path: "/",
-    blackIcon: "/icons/svgs/microscope-black.svg",
-    whiteIcon: "/icons/svgs/microscope-blanc.svg",
-  },
-  {
-    name: "DEEP-T",
-    path: "/deep-t",
-    blackIcon: "/icons/svgs/patient-black.svg",
-    whiteIcon: "/icons/svgs/patient-blanc.svg",
-  },
-];
+
 
 export default function SolutionMenu() {
   const pathname = usePathname();
   const router = useRouter();
+  const t = useTranslations()
+
+  const pages = [
+    {
+      name: t('CLIN_T'),
+      path: "/",
+      blackIcon: "/icons/svgs/microscope-black.svg",
+      whiteIcon: "/icons/svgs/microscope-blanc.svg",
+    },
+    {
+      name: t('DEEP_T'),
+      path: "/deep-t",
+      blackIcon: "/icons/svgs/patient-black.svg",
+      whiteIcon: "/icons/svgs/patient-blanc.svg",
+    },
+  ];
 
   const selected = pages.find((page) => page.path === pathname);
 
@@ -31,7 +35,7 @@ export default function SolutionMenu() {
     <Menu as="div" className={styles.container}>
       {/* Trigger */}
       <MenuButton className={styles.trigger} style={{ fontSize: "large" }}>
-        Solutions <ArrowDownIcon width={10} height={10} />
+        {t('Solutions')} <ArrowDownIcon width={10} height={10} />
       </MenuButton>
 
       {/* Dropdown */}

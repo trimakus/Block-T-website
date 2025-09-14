@@ -1,26 +1,23 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function DeepTAdvancingResearch() {
+  const t = useTranslations()
   return (
     <section className={"blue-white-gradient"}>
       <div className={`text-img-display container`}>
         <div>
-          <h2>Simplifying Research, Amplifying Results</h2>
+          <h2>{t('Simplifying_Research_Amplifying_Results')}</h2>
           <h1 className="text-dark-blue-gradient big-title">
-            Advancing Research
+            {t('Advancing_Research')}
           </h1>
           <p>
-            We offer tailored services designed to empower your research
-            journey. Whether you are conducting preclinical studies or managing
-            complex clinical trials, our services ensure your work is reliable,
-            efficient, and impactful.
+           {t('We_offer_tailored_services')}
           </p>
           <p>
-            By combining cutting-edge technology with expert guidance, we help
-            researchers overcome challenges, optimize processes, and achieve
-            breakthrough results.
+            {t('By_combining_cutting_edge')}
           </p>
         </div>
 

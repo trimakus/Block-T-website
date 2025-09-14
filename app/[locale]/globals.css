@@ -85,6 +85,9 @@ body {
 .p-1{
   padding: 1rem;
 }
+.py-2{
+  padding: 2rem 0;
+}
 .p-2{
   padding: 2rem;
 }
@@ -207,12 +210,24 @@ body {
         background: var(--orange-gradient) !important;
         color: #fff !important;
       }
+      
   }
   .text-menu-item {
     white-space: nowrap;
     font-size: 0.9rem;
-    font-weight: 500;;
+    font-weight: 500;
+    &:hover {
+      background-color: #fff;
+    }
+
   }
+
+}
+
+.service-menu{
+  padding:1rem ;
+  left: -20rem;
+  
 }
 
 .big-title{
@@ -316,11 +331,18 @@ ul.custom-list li::before {
   text-decoration: none;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1024px){
   .text-img-display{
       flex-wrap: wrap;
   }
+  .service-menu{
+    left: -2rem;
+    overflow-x: auto;
+  max-height: 400px;
+  }
 }
+
+
 
 @media (max-width:768px){
   .text-img-display{
@@ -329,6 +351,9 @@ ul.custom-list li::before {
           height: 300;
       }
   }
+ 
+    
+    
 }
 
 @media (max-width:450px){

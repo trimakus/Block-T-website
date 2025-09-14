@@ -4,38 +4,41 @@ import styles from "@/src/assets/styles/DeepT.module.scss";
 import LeftYellowArrow from "@/public/icons/leftYellowArrow";
 import RightYellowArrow from "@/public/icons/rightYellowArrow";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-const categories = [
-  "Data management and integrity",
-  "Workflow Automation",
-  "Collaboration & Oversight",
-  "Study Monitoring & Project Management",
-  "Integration & Interoperability",
-  "Resource & Inventory Management",
-  "Security & Compliance",
-  "Environmental Monitoring",
-  "Knowledge Management",
-  "Productivity & Scheduling",
-];
 
 function DeepTPreclinicalServices() {
+  const t = useTranslations()
+
   const [selectedCategory, setSelectedCategory] = useState(
     "Security & Compliance"
   );
 
+  const categories = [
+    "Data management and integrity",
+    "Workflow Automation",
+    "Collaboration & Oversight",
+    "Study Monitoring & Project Management",
+    "Integration & Interoperability",
+    "Resource & Inventory Management",
+    "Security & Compliance",
+    "Environmental Monitoring",
+    "Knowledge Management",
+    "Productivity & Scheduling",
+  ];
   const handleClickCategory = (category: string) => {
     setSelectedCategory(category);
   };
 
+
   return (
     <div className="container text-center">
-      <h1 className="text-gold-dark-gradient">Preclinical Services (DEEP-T)</h1>
+      <h1 className="text-gold-dark-gradient">{t('Preclinical_Services')} ({t('DEEP_T')})</h1>
       <h1 className="text-dark-blue-gradient">
-        Laying the Foundation for Preclinical Success
+        {t('Laying_the_Foundation_for_Preclinical_Success')}
       </h1>
       <p>
-        Our preclinical services are designed to support the earliest stages of
-        research, ensuring robust methodologies and data reliability.
+        {t('Our_preclinical_services_are_designed')}
       </p>
 
       {/* Category Buttons */}
@@ -52,10 +55,13 @@ function DeepTPreclinicalServices() {
           </div>
         ))}
       </div>
-
+      <div className={`flex flex-between p-2 ${styles.sliderArrowsMobile}`}>
+          <LeftYellowArrow />
+          <RightYellowArrow />
+        </div>
       {/* Service Card with Background */}
-      <div className="flex-between gap-1 p-2 ">
-        <div className="flex flex-align-center">
+      <div className="flex-between gap-1 py-2">
+        <div className={`flex flex-align-center ${styles.sliderArrows}`}>
           <LeftYellowArrow />
         </div>
 
@@ -104,7 +110,7 @@ function DeepTPreclinicalServices() {
           </div>
         </div>
 
-        <div className="flex flex-align-center">
+        <div className={`flex flex-align-center ${styles.sliderArrows}`}>
           <RightYellowArrow />
         </div>
       </div>

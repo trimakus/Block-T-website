@@ -7,8 +7,10 @@ background-position: center;
 // background-attachment: fixed; 
 }
 
-.card{
-  background: #4343434D 0.5;
+.card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px) !important;
+  background: rgba(67, 67, 67, .3);
   border-radius: 20px;
   max-width: 40rem;
   padding: 1.5rem 2.5rem;
@@ -38,7 +40,7 @@ background-position: center;
     }
   }
   
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
     .hero {
       padding: 5rem 0;
       justify-content: center;

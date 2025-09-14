@@ -1,48 +1,51 @@
+"use client";
 import React from "react";
 import styles from "@/src/assets/styles/DeepT.module.scss";
+import { useTranslations } from "next-intl";
 
 function DeepTPreclinicalSolution() {
+  const t = useTranslations()
   const benefitsData = [
     {
       img: "/imgs/humain-chip.png",
-      title: "DEEP-NOTE",
+      title: t("DEEP-NOTE"),
       benefits: [
-       'Documents research in one place.',
-       'Capture and import data from complex and simple analytical instruments.'
+       t('Documents_research_in_one_place'),
+       t('Capture_and_import_data_from_complex')
       ],
     },
     {
       img: "/imgs/computer-chip.png",
-      title: "DEEP-TRACE",
+      title: t("DEEP-TRACE"),
       benefits: [
-        'Data integrity enhanced by verifying equipment, lab personnel and materials / products / samples. '
+        t('Data_integrity_enhanced_by_verifying')
       ],
     },
     {
         img: "/imgs/computer-chip.png",
-        title: "DEEP-WORKFLOW",
+        title: t("DEEP-WORKFLOW"),
         benefits: [
-         'Design your protocols.',
-         'Frame your data flow.',
-         'Connect your instrumentation.'
+          t('Design_your_protocols'),
+          t('Frame_your_data_flow'),
+          t('Connect_your_instrumentation')
         ],
       },
       {
         img: "/imgs/computer-chip.png",
-        title: "DEEP-TRACE",
+        title: t("DEEP-TRACE"),
         benefits: [
-          'Manage product inventory, storage capacity. ',
-          'Oversight of a lab’s entire inventory.'
+          t('Manage_product_inventory'),
+          t('Oversight_of_a_labs_entire_inventory')
         ],
       },
   ];
   return (
     <div className="container text-center">
-        <h1 className="text-gold-dark-gradient">Preclinical Solution<br /> DEEP-T</h1>
+        <h1 className="text-gold-dark-gradient">{t('Preclinical_Solution')}<br /> {t('DEEP_T')}</h1>
       <h1 className="text-dark-blue-gradient">
-      Built for the Future <br /> of Preclinical Research
+      {t('Built_for_the_Future')} <br /> {t('of_Preclinical_Research')}
       </h1>
-      <p> <strong>Deep-T</strong>  is designed to transform preclinical research with cutting-edge technology. By combining AI and blockchain, it enhances data integrity, accelerates workflows, and ensures compliance, enabling researchers to focus on breakthroughs without worrying about reliability or scalability.</p>
+      <p> <strong>{t('Deep-T')}</strong>  {t('is_designed_to_transform_preclinical_research')}</p>
       <div className={styles.deepTPreclilnicalSolution + ' p-1'}>
         {benefitsData.map((item, index) => (
           <div className={styles.benefitCard} key={index}>

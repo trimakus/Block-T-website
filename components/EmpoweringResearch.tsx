@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function EmpoweringResearch() {
+  const t = useTranslations()
   return (
     <section className={`blue-white-gradient`}>
         <div className={`text-img-display container`}>
@@ -13,21 +15,16 @@ function EmpoweringResearch() {
         height={450}
       />
       <div>
-        <h3>Transforming Research with Innovative Solutions</h3>
-        <h1> <span className="text-dark-blue-gradient">Empowering</span> Research</h1>
+        <h3>{t('Transforming_Research_with_Innovative_Solutions')}</h3>
+        <h1> <span className="text-dark-blue-gradient">{t('Empowering')}</span> {t('Research')}</h1>
         <p>
-          In the ever-evolving field of biomedical research, having reliable,
-          scalable, and secure solutions is essential to driving progress.
+          {t('In_the_ever_evolving_field_of_biomedical_research')}
         </p>
         <p>
-          we offer state-of-the-art platforms that integrate AI and blockchain
-          technology to enhance data integrity, streamline workflows, and
-          promote reproducibility.
+          {t('we_offer_state_of_the_art_platforms')}
         </p>
         <p>
-          Whether you&apos;re in preclinical or clinical research, our solutions are
-          tailored to meet your specific needs and ensure trustworthy, impactful
-          results.
+          {t('Whether_youre_in_preclinical')}
         </p>
       </div>
       </div>

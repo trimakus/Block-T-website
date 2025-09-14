@@ -115,7 +115,7 @@ const Services = () => {
   };
 
   const servicesList =
-    selectedServiceType === t("Pre_Clinical_Trial")
+    selectedServiceType === "Pre_Clinical_Trial"
       ? servicesPreClincal
       : servicesClincal;
 
@@ -123,9 +123,9 @@ const Services = () => {
     <section className={`${styles.services} blue-white-blue-gradient`} id="services">
       <div className="container flex flex-col flex-align-center">
         <h1 className="text-dark-blue-gradient text-center">
-        Multiple Services for a Seamless 
+        {t('Multiple_Services_for_a_Seamless')}
           <br />
-          Research Experience
+          {t('Research_Experience')}
         </h1>
         <p>{t("Platforms_Description")}</p>
         <div className={styles["service-container"]}>

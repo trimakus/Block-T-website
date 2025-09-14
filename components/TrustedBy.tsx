@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import styles from "@/src/assets/styles/TrustedBy.module.scss";
 import { useTranslations } from "next-intl";

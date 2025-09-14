@@ -1,3 +1,4 @@
+"use client";
 import styles from "@/src/assets/styles/OurSolutions.module.scss";
 import { useTranslations } from "next-intl";
 
@@ -6,14 +7,14 @@ export default function OurSolutions() {
   const solutions = [
     {
       img: "/imgs/preclinical.png",
-      title: "Preclinical",
-      desc: "Empowering preclinical research with secure data workflows and AI-driven insights.",
+      title:t("Preclinical"),
+      desc: t('Empowering_preclinical_research'),
 
     },
     {
       img: "/imgs/clinical.png",
-      title: "clinical",
-      desc: "Revolutionizing clinical trials through transparency, accountability, and reproducible processes.",
+      title: t("Clinical"),
+      desc:t('Revolutionizing_clinical_trials_through_transparency'),
 
     },
   ];

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import styles from "@/src/assets/styles/CtaSection.module.scss";
 import ArrowRightIcon from "@/public/icons/arrowRightIcon";
@@ -14,7 +15,7 @@ const CtaSection = () => {
         <div className={styles.ctaButtons}>
           
           <Link href={'/request-demo'} className={"btn btn-dark-blue-gradient text-decoration-none"}>
-          {t("RequestADemo")} <ArrowRightIcon width={10} height={11} />
+          {t("Request_A_Demo")} <ArrowRightIcon width={10} height={11} />
           </Link>
           <Link href={'/contact-us'} className={"btn btn-orange-gradient text-decoration-none"}>
             {t("Contact_Us")}

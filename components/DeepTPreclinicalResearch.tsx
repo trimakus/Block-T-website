@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function DeepTPreclinicalResearch() {
+  const t = useTranslations()
   return (
     <section className={"blue-white-gradient"}>
       <div className={`text-img-display container`}>
@@ -13,21 +15,15 @@ function DeepTPreclinicalResearch() {
           height={500}
         />
         <div>
-          <h2>The Reproducibility Crisis in Preclinical Research</h2>
+          <h2>{t('The_Reproducibility_Crisis_in_Preclinical_Research')}</h2>
           <h1 className="text-dark-blue-gradient big-title">
-            Preclinical Research
+            {t('Preclinical_Research')}
           </h1>
           <p>
-            The lack of reproducibility in preclinical studies has become a
-            significant barrier to scientific progress. Is. Inconsistent
-            methodologies, inadequate data tracking, and fragmented processes
-            have resulted in unreliable results that slow down innovation and
-            waste valuable resource.
+            {t('The_lack_of_reproducibility_in_preclinical')}
           </p>
           <p>
-            <strong>Deep-T</strong> addresses these issues by introducing robust
-            systems that ensure research outcomes can be replicated with
-            confidence, paving the way for clinical success.{" "}
+            <strong>{t('Deep-T')}</strong> {t('addresses_these_issues_by_introducing')}
           </p>
         </div>
       </div>
